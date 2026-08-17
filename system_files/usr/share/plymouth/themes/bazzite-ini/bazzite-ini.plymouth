@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Bazzite Ini Custom Boot
+Description=A custom boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/bazzite-ini
+ScriptFile=/usr/share/plymouth/themes/bazzite-ini/bazzite-ini.script
