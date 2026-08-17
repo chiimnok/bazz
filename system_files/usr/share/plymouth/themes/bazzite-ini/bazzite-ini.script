@@ -1,0 +1,18 @@
+# Set background color to solid black (RGB: 0, 0, 0)
+Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
+Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
+
+# Load your custom logo image
+logo.image = Image("logo.png");
+logo.sprite = Sprite(logo.image);
+
+# Mathematically calculate the exact center of your screen
+logo.x = Window.GetWidth() / 2 - logo.image.GetWidth() / 2;
+logo.y = Window.GetHeight() / 2 - logo.image.GetHeight() / 2;
+logo.sprite.SetPosition(logo.x, logo.y, 1000);
+
+# Keeps the splash visible for the entire duration of the boot process
+fun refresh_callback () {
+  # Future animations or progress indicators can be added here
+}
+Plymouth.SetRefreshFunction(refresh_callback);
