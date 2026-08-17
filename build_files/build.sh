@@ -25,3 +25,13 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+# Install the missing scripting plugin
+rpm-ostree install plymouth-plugin-script
+
+# Link the daemon explicitly at build time
+mkdir -p /etc/plymouth
+echo -e "[Daemon]\nTheme=bazzite-ini" > /etc/plymouth/plymouthd.conf
+
+# Force set the default flag
+plymouth-set-default-theme bazzite-ini
